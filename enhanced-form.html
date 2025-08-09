@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>User Registration</h1>
+    <p>Please fill out the form below to complete your registration.</p>
+  </header>
+
+  <main>
+    <!-- ✅ Form with various input types and attributes -->
+    <form action="/submit" method="POST">
+      <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required autocomplete="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="120" required>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">-- Select Country --</option>
+          <option value="usa">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="ca">Canada</option>
+        </select>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" id="male" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" required>
+        <label for="female">Female</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label for="newsletter">Subscribe to newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter">
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself..." required></textarea>
+
+        <label for="referral">Referral Code (read-only):</label>
+        <input type="text" id="referral" name="referral" value="INVITE2025" readonly>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ✅ Ordered List -->
+    <section>
+      <h2>Top Benefits of Registering</h2>
+      <ol>
+        <li>Access to exclusive content</li>
+        <li>Monthly newsletters</li>
+        <li>Early access to events</li>
+      </ol>
+    </section>
+
+    <!-- ✅ Table -->
+    <section>
+      <h2>Subscription Plans</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Features</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>Access to articles</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>Articles + Events</td>
+            <td>$9.99/month</td>
+          </tr>
+          <tr>
+            <td>Pro</td>
+            <td>All Features</td>
+            <td>$19.99/month</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ✅ Media -->
+    <section>
+      <h2>Welcome Video</h2>
+      <video width="320" controls>
+        <source src="welcome.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h2>Intro Music</h2>
+      <audio controls>
+        <source src="intro.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h2>Our Logo</h2>
+      <img src="logo.png" alt="Company Logo" width="150">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MyCompany. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
